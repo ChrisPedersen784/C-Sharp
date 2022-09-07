@@ -1,46 +1,65 @@
-﻿namespace KonsolApplikation
+﻿namespace Programming02
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-
-
-            Console.WriteLine("What is your full name? ");
-            string fName;
-            fName = Console.ReadLine();
-            Console.WriteLine("Hello " + fName);
-
-            string age;
-            int newAge;
-
-            do
-            {
-      
-                Console.WriteLine("How old are you? ");
-                //Reads user age and stores it into age
-                age = Console.ReadLine();
-                //Here we check again if age is an integer
-                //if NOT true run the if statement!
-                if(!int.TryParse(age, out newAge))
-                {
-                    Console.WriteLine("Enter valid number");
-                }   
-
-            } while (!int.TryParse(age, out newAge)); 
-            //age = user input, 
-            //newAge gets the valid integer save, so newAge holds the value
+            /*
+             Brugeren skal kunne indtaste sit navn og alder via konsolvinduet
+            og gemme oplysningerne i henholdsvis en string og int variabel (husk konvertering). 
+            Genbrug kode fra tidligere øvelse.
+             */
 
             /*
-             The Do While loop will run as long as age is the user input a valid integer.
-            AND keep looping if user inputs a string!!
+             De indtastede oplysninger udskrives til konsolvinduet sammen med en angivelse, om man er et barn, teenager etc. ud fra den indtastede alder med følgende forslag til en aldersinddeling og -beskrivelse:
+            0-12:   ”et barn”
+            13-19: ”en teenager”
+            20-25: ”en studerende”      
+            26-67: ” i arbejde”
+            > 67:    ”en pensionist”
              */
-                                                      
-            //This will run after the Do While Loop..
-            Console.WriteLine("success");
-            Console.WriteLine("You are " + newAge + " years old");
-    
 
+
+            Console.WriteLine("Indtast navn");
+            string navn = Console.ReadLine();
+            Console.WriteLine("Hej " + navn);
+
+            Console.WriteLine("Indtast alder: ");
+            string nyAlder = Console.ReadLine();
+            int alder = int.Parse(nyAlder);
+
+            if (alder <= 12 && alder >= 0)
+            {
+                Console.WriteLine("Et barn");
+            } else if (alder >= 13 && alder <= 19)
+            {
+                Console.WriteLine("en teenager");
+            } else if (alder >= 20 && alder <= 25)
+            {
+                Console.WriteLine("En studerende");
+            } else if (alder >= 26 && alder <= 67)
+            {
+                Console.WriteLine("En i arbejde");
+
+            } else if (alder >= 67)
+            {
+                Console.WriteLine("En pensionist");
+
+            }else
+            {
+                Console.WriteLine("Du har indtastet en ugyldig alder");
+            }
+
+
+
+            Console.WriteLine("Din alder er: " + alder);
+
+
+            
+            
+
+
+            Console.ReadLine(); 
         }
     }
 }
