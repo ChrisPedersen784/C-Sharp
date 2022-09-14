@@ -1,65 +1,73 @@
-﻿namespace Programming02
+﻿namespace LommeRegner
 {
     internal class Program
     {
+
+
         static void Main(string[] args)
         {
-            /*
-             Brugeren skal kunne indtaste sit navn og alder via konsolvinduet
-            og gemme oplysningerne i henholdsvis en string og int variabel (husk konvertering). 
-            Genbrug kode fra tidligere øvelse.
-             */
 
-            /*
-             De indtastede oplysninger udskrives til konsolvinduet sammen med en angivelse, om man er et barn, teenager etc. ud fra den indtastede alder med følgende forslag til en aldersinddeling og -beskrivelse:
-            0-12:   ”et barn”
-            13-19: ”en teenager”
-            20-25: ”en studerende”      
-            26-67: ” i arbejde”
-            > 67:    ”en pensionist”
-             */
+            LommeRegner l = new LommeRegner();
 
-
-            Console.WriteLine("Indtast navn");
-            string navn = Console.ReadLine();
-            Console.WriteLine("Hej " + navn);
-
-            Console.WriteLine("Indtast alder: ");
-            string nyAlder = Console.ReadLine();
-            int alder = int.Parse(nyAlder);
-
-            if (alder <= 12 && alder >= 0)
+            bool runProgram = true;
+            do
             {
-                Console.WriteLine("Et barn");
-            } else if (alder >= 13 && alder <= 19)
-            {
-                Console.WriteLine("en teenager");
-            } else if (alder >= 20 && alder <= 25)
-            {
-                Console.WriteLine("En studerende");
-            } else if (alder >= 26 && alder <= 67)
-            {
-                Console.WriteLine("En i arbejde");
+            Console.WriteLine("Vælg et regnestykke format:");
+            Console.WriteLine("tryk 1 for: Add");
+            Console.WriteLine("tryk 2 for: Substract");
+            Console.WriteLine("tryk 3 for: Divide");
+            Console.WriteLine("tryk 4 for: Multiply");
+            Console.WriteLine("tryk 0 for at lukke programmet");
+              
+            string input = Console.ReadLine().ToLower();
+            if(input == "1" || input == "2" || input == "3" || input == "4" || input == "0")
+                {
 
-            } else if (alder >= 67)
-            {
-                Console.WriteLine("En pensionist");
+            if(input == "0")
+                {
+                    runProgram = false;
+                    Console.WriteLine("GoodBye....");
+                    break;
+                }else
+                {
+                    runProgram = true;  
+                }
 
-            }else
-            {
-                Console.WriteLine("Du har indtastet en ugyldig alder");
-            }
+            Console.WriteLine("Indtast dit første tal");
+            double input1 = double.Parse(Console.ReadLine());
+            Console.WriteLine("Indtast dit første tal");
+            double input2 = double.Parse(Console.ReadLine());
 
+                if(input == "1")
+                {
+                double addResult = l.Add(input1,input2);
+                Console.WriteLine("Result " + addResult);
 
+                }else if(input == "2")
+                {
+                    double subResult = l.Substract(input1, input2);
+                    Console.WriteLine("Result " + subResult);
+                }
+                else if (input == "3")
+                {
+                    double divResult = l.Divide(input1, input2);
+                    Console.WriteLine("Result " + divResult);
+                }
+                else if(input == "4")
+                {
+                    double multiResult = l.Multiply(input1, input2);
+                    Console.WriteLine("Result " + multiResult);
+                }
+                } 
+                else
+                {
+                    Console.WriteLine("Not a valid input");
+                }
 
-            Console.WriteLine("Din alder er: " + alder);
+                
+            }while(runProgram);
 
-
-            
-            
-
-
-            Console.ReadLine(); 
+            Console.ReadLine();
         }
     }
 }
