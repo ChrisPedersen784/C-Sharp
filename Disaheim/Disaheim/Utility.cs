@@ -12,7 +12,6 @@ namespace Disaheim
         public double GetValueOfBook(Book book)
         {
 
-
             return book.Price;
         }
 
@@ -35,6 +34,8 @@ namespace Disaheim
 
             return price;
         }
+
+
 
 
         public double GetValueOfCourse(Course course)

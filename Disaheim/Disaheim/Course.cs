@@ -14,6 +14,7 @@ namespace Disaheim
         public Course(string name)
         {
             Name = name;
+            DurationInMinutes = 0;
         }
 
         public Course(string name, int durationInMinutes) : this(name)
