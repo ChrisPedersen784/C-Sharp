@@ -5,7 +5,9 @@ VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Disaheim", "Disaheim\Disaheim.csproj", "{0641FB8B-A2D5-44B3-9B0C-02BFFCFA9B0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DisaheimTest", "DisaheimTest\DisaheimTest.csproj", "{2F9F68FC-F89E-4A13-8300-BD091F7B8F76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DisaheimTest", "DisaheimTest\DisaheimTest.csproj", "{2F9F68FC-F89E-4A13-8300-BD091F7B8F76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtilityLib", "UtilityLib\UtilityLib.csproj", "{7FA74901-33BB-4A6F-B0A0-A21888936593}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{2F9F68FC-F89E-4A13-8300-BD091F7B8F76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F9F68FC-F89E-4A13-8300-BD091F7B8F76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F9F68FC-F89E-4A13-8300-BD091F7B8F76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FA74901-33BB-4A6F-B0A0-A21888936593}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FA74901-33BB-4A6F-B0A0-A21888936593}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FA74901-33BB-4A6F-B0A0-A21888936593}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FA74901-33BB-4A6F-B0A0-A21888936593}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -103,3 +103,5 @@ C:\Users\45223\Documents\GitHub\C-Sharp\Disaheim\DisaheimTest\obj\Debug\net6.0\r
 C:\Users\45223\Documents\GitHub\C-Sharp\Disaheim\DisaheimTest\obj\Debug\net6.0\DisaheimTest.pdb
 C:\Users\45223\Documents\GitHub\C-Sharp\Disaheim\DisaheimTest\obj\Debug\net6.0\DisaheimTest.genruntimeconfig.cache
 C:\Users\45223\Documents\GitHub\C-Sharp\Disaheim\DisaheimTest\obj\Debug\net6.0\ref\DisaheimTest.dll
+C:\Users\45223\Documents\GitHub\C-Sharp\Disaheim\DisaheimTest\bin\Debug\net6.0\UtilityLib.dll
+C:\Users\45223\Documents\GitHub\C-Sharp\Disaheim\DisaheimTest\bin\Debug\net6.0\UtilityLib.pdb

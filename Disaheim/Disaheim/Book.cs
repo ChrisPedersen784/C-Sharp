@@ -6,20 +6,20 @@ using System.Threading.Tasks;
 
 namespace Disaheim
 {
-    public class Book
+    public class Book : Merchandise
     {
         public string ItemId { get; set; }
         public string Title { get; set; }
         public double Price { get; set; }
 
-        public Book(string itemId)
+        public Book(string itemId) : base(itemId) 
         {
-            ItemId= itemId;
+            ItemId = itemId;
         }
 
         public Book(string itemId, string title) : this(itemId)
         {
-            Title= title;
+            Title = title;
         }
 
         public Book(string itemId, string title, double price) : this(itemId, title)

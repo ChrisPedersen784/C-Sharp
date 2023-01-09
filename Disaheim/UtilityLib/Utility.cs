@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Disaheim;
 
 namespace Disaheim
 {
@@ -33,6 +34,32 @@ namespace Disaheim
             }
 
             return price;
+        }
+
+
+        public double GetValueOfCourse(Course course)
+        {
+            int result = (course.DurationInMinutes / 60);
+
+            if (course.DurationInMinutes % 60 != 0 && course.DurationInMinutes > 0)
+            {
+                result++;
+                result *= 875;
+
+            }
+            else if (course.DurationInMinutes % 60 == 0)
+            {
+                result *= 875;
+            }
+
+            else
+            {
+                course.DurationInMinutes = 0;
+            }
+
+
+            return result;
+
         }
     }
 }
